@@ -37,3 +37,14 @@ const team = [
 }
 ]
 
+const rowJs = document.getElementById ("row");
+
+for (const member of team) {
+  rowJs.innerHTML += `
+  <div class="card">
+    <img src="assets/img/${member.img}" alt="${member.nome} ${member.cognome}">
+    <h2>${member.nome} ${member.cognome}</h2>
+    <p>${member.role}</p>
+  </div>
+  `;
+}
