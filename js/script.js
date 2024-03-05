@@ -41,10 +41,14 @@ const rowJs = document.getElementById ("row");
 
 for (const member of team) {
   rowJs.innerHTML += `
-  <div class="card">
-    <img src="assets/img/${member.img}" alt="${member.nome} ${member.cognome}">
-    <h2>${member.nome} ${member.cognome}</h2>
-    <p>${member.role}</p>
+  <div class="col">
+    <div class="card rounded-0 my-5">
+      <img class="card-img-top rounded-0 " src = "assets/img/${member.img}" alt="${member.nome} ${member.cognome}">
+      <div class="card-body text-center text-secondary">
+      <h2>${member.nome} ${member.cognome}</h2>
+      <p>${member.role}</p>
+      </div>
+    </div>
   </div>
   `;
 }
